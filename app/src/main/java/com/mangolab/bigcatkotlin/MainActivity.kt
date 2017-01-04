@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Search Big Cat in the city..", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Search Big Cat in the city...", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
     }
