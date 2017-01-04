@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
+import com.mangolab.bigcatkotlin.utils.generateSum
+import com.mangolab.bigcatkotlin.utils.greetings
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,10 +18,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
-
+        val txtGreeting = TextView(this) as TextView
+        val name = "Raj Forhad";
         val fab = findViewById(R.id.fab) as FloatingActionButton
+        txtGreeting.setText(name);
+
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Search Big Cat in the city...", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Search Big Cat in the city..." + greetings(name) + "\n" +" You have found " + generateSum(4, 2) + " Big Cats ", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
     }
