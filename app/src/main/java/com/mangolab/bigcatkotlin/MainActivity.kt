@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Search Big Cat in the city..", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
     }
@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         val id = item.itemId
-
 
         if (id == R.id.action_settings) {
             return true
